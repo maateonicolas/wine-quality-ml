@@ -1,0 +1,21 @@
+# Configuración general del proyecto
+
+project:
+  name: wine-quality-ml
+  random_state: 42
+
+data:
+  raw_path: data/raw/winequality-red.csv
+  processed_path: data/processed/wine_quality_processed.csv
+  predictions_path: results/final_predictions.csv
+
+target:
+  column: quality
+  problem_type: regression  # opciones futuras: regression, binary_classification, multiclass_classification
+
+split:
+  test_size: 0.2
+  cv_folds: 5
+
+models:
+  save_path: models/best_model.pkl
